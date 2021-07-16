@@ -48,7 +48,7 @@ typings/
 *.tsbuildinfo
 
 # Optional npm cache directory
-.npm
+
 
 # Optional eslint cache
 .eslintcache
@@ -102,4 +102,3 @@ dist
 
 # TernJS port file
 .tern-port
-storage/
