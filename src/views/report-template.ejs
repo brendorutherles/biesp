@@ -1335,8 +1335,7 @@
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
         
           <%# verificação quantidade de paginas brendo rutherles %> 
-        <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ? '1/2' : ''%>
-        <%= boletim.pessoas.length > 2 && boletim.pessoas.length < 4 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ? '1/2' : ''%>
+        <%=  boletim.pessoas.length <= 2 ? '1/' + boletim.pagina.replace(/\D/g, '') : ''%>
 
         
         </td>
