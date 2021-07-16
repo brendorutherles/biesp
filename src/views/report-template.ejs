@@ -1325,7 +1325,12 @@
           <%= boletim.horaRegistro %>
 
         </td>
-        <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5"></td>
+        <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
+        
+          <%# verificação quantidade de paginas brendo rutherles %> 
+        <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ? '1/2' : ' '%>
+        
+        </td>
       </tr>
       <tr style="height: 12px">
         <th id="1592487475R2" style="height: 12px" class="row-headers-background"></th>
