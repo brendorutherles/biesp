@@ -1,0 +1,189 @@
+@media print {
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font-size: 8px !important;
+    font-family: 'Arial' !important;
+    color: #000000
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 5mm;
+    margin: 10mm auto;
+    border: 1px #000000 solid;
+    /*border-radius: 5px;*/
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#codigo-barras {
+    font-family: 'CIA ITF Tall';
+    font-size: 15px;
+    padding-top: 5px
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 1px !important;
+}
+
+.table > tbody > tr > td {
+    border: 1px solid #000000 !important;
+}
+
+.table > tbody > tr > th {
+    border-right: 1px solid #000000 !important;
+    border-left: 1px solid #000000 !important;
+}
+
+.table tr td.sem-borda {
+    border: none !important
+}
+
+.esconder-borda-inferior {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+.padding-linha-digitavel {
+    padding: 5px;
+}
+
+.padding-top-10 {
+    padding-bottom: 10px !important;
+}
+
+.padding-bottom-7 {
+    padding-bottom: 7px !important;
+}
+
+.margem-topo-5 {
+    margin-top: 5px !important;
+}
+
+.margem-topo-15 {
+    margin-top: 15px !important;
+}
+
+.margem-inferior-10 {
+    margin-bottom: 10px;
+}
+
+.margem-esquerda-10 {
+    margin-left: 10px !important;
+}
+
+.margem-direita-10 {
+    margin-right: 10px !important;
+}
+
+.sem-margem {
+    margin: 0 !important;
+}
+
+.titulo {
+    font-size: 10px;
+    /*text-align: center !important;*/
+    font-weight: bold;
+    border: none !important
+}
+
+.titulo-debitos {
+    margin: 5px 0 5px 15px;
+}
+
+.fonte-5 {
+    font-size: 5px !important;
+}
+
+.fonte-6 {
+    font-size: 6px !important;
+}
+
+.fonte-7 {
+    font-size: 7px !important;
+}
+
+.fonte-9 {
+    font-size: 9px !important;
+}
+
+.fonte-10 {
+    font-size: 10px !important;
+}
+
+.fonte-11 {
+    font-size: 11px !important;
+}
+
+.fonte-negrito {
+    font-weight: bold;
+}
+
+.fonte-normal {
+    font-weight: normal !important;
+}
+
+.borda-tracejada {
+    border: 0.5px solid #000000;
+    border-style: dashed;
+    margin-top: 4px
+}
+
+.borda-esquerda {
+    border-left: 1px solid #000000 !important;
+}
+
+.borda-direita {
+    border-left: 1px solid #000000 !important;
+}
+
+.borda-superior {
+    border-top: 1px solid #000000 !important;
+}
+
+.titulo-guiaS {
+    line-height: 4.5;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.linha-digitavel {
+    line-height: 4.5;
+    font-size: 11px;
+}
+
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
