@@ -1,0 +1,3 @@
+DB_HOST="mongodb+srv://mongoadm:AI9zpiVGKYVHS5zi@cluster0.7momj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+DB_USER="mongoadm"
+DB_PASS="AI9zpiVGKYVHS5zi"
