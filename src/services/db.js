@@ -3,12 +3,12 @@ import dotenv  from "dotenv";
 
 dotenv.config();
 
-const mongourl = process.env.DB_HOST;
-
+const mongourl = "mongodb+srv://mongoadm:AI9zpiVGKYVHS5zi@cluster0.7momj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const mongoconfig = {
   useNewUrlParser: true,
   useCreateIndex: true,
 };
+
 
 export default async () => {
   const db = mongoose.connection;
