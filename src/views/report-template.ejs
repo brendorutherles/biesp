@@ -1275,7 +1275,13 @@
     text-align: center;
     padding-top: 20;
   }
+  @page {
+  @bottom-left {
+    content: counter(page) ' of ' counter(pages);
+  }
+}
 </style>
+
 
 <%# inicio pagina1 brendo rutherles %>
   <div class="ritz grid-container page " dir="ltr">
@@ -1328,7 +1334,9 @@
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
         
           <%# verificação quantidade de paginas brendo rutherles %> 
-        <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ? '1/2' : ' '%>
+        <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ? '1/2' : ''%>
+        <%= boletim.pessoas.length > 2 && boletim.pessoas.length < 4 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ? '1/2' : ''%>
+
         
         </td>
       </tr>
