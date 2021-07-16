@@ -101,8 +101,8 @@ export default {
         pdf
           .create(data, {
             scale: 0.1,
-            height: '426mm',
-            width: '282mm',
+            height: '425mm',
+            width: '283mm',
             header: {
               height: '0mm'
             },
