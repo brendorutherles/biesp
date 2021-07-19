@@ -1336,6 +1336,9 @@
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
         
           <%# verificação quantidade de paginas brendo rutherles %> 
+          <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 3 ?
+           '1/2' : '1/' boletim.pagina.replace(/([^\d])+/gim, '')%>
+
 
         
         </td>
@@ -6520,7 +6523,7 @@
                   <tr style="height: 11px">
                     <th id="851099115R2" style="height: 11px" class="row-headers-background">
                       <div class="row-header-wrapper" style="line-height: 11px"></div>
-                    </th>
+                    </th>teste
 
                     
                     <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"  colspan="2"
@@ -6631,9 +6634,9 @@
 
 
 
-                        <td class="s012 vertical" dir="ltr" rowspan="6"> <div style=" display: inline-block; transform: rotate(-90deg); writing-mode: tb-rl;
-                          transform: rotate(-180deg);
-                   text-align: center;" >Obejeto Nº 1</div>
+                        <td style=" display: inline-block; transform: rotate(-90deg); writing-mode: tb-rl;
+                        transform: rotate(-180deg);
+                 text-align: center;"  class="s0 vertical" rowspan="6"> <div >Obejeto Nº 1</div>
                         </td>
                         <td class="s01">Envolvido</td>
                         <td class="s02">Tipo de Objeto</td>
