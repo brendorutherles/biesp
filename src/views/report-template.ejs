@@ -1336,11 +1336,10 @@
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
         
           <%# verificação quantidade de paginas brendo rutherles %> 
-          <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 3 ?
+          <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ?
            '1/2' : "" %>
-
-
-<%= boletim.pessoas.pagina > 0 ? "1/" boletim.pagina.replace(/([^\d])+/gim, '') : "" %>
+         
+          <%= boletim.pagina.length > 0 ? "1/" boletim.pagina.replace(/([^\d])+/gim, '') : "" %>
           
         
         </td>
@@ -6638,7 +6637,7 @@
 
                         <td style=" display: inline-block; transform: rotate(-90deg); writing-mode: tb-rl;
                         transform: rotate(-180deg);
-                 text-align: center;"  class="s0 vertical" rowspan="6"> <div >Obejeto Nº 1</div>
+                 text-align: center;"  class=" vertical" rowspan="6"> <div >Obejeto Nº 1</div>
                         </td>
                         <td class="s01">Envolvido</td>
                         <td class="s02">Tipo de Objeto</td>
