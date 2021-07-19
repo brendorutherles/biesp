@@ -121,6 +121,15 @@
     padding: 0px 3px 0px 3px;
   }
 
+
+  .ss12 {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
   .ritz .waffle .s2 {
     background-color: #ffffff;
     text-align: left;
@@ -1338,7 +1347,8 @@
           <%# verificação quantidade de paginas brendo rutherles %> 
           <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ?
            '1/2' : "" %>
-         
+
+
           
         
         </td>
@@ -6514,8 +6524,8 @@
                 
                           </td>
                           <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
-                            <%= %>
-                          </td>
+                            <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ?
+                            '2/2' : "" %>                          </td>
                         </tr>
 
 
@@ -6623,7 +6633,7 @@
 
 
                       <td style="  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"
-                      rowspan="18"> <div class="vertical"
+                      rowspan="18"> <div class=" ss12 vertical"
                       >Objeto</div>
 
                       <div class=" vertical" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  "></div>
