@@ -1339,7 +1339,7 @@
           <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ?
            '1/2' : "" %>
          
-          <%= boletim.pagina.length > 0 ? "1/" boletim.pagina.replace(/([^\d])+/gim, '') : "" %>
+          <%= boletim.pagina.length > 0 ? "1/" boletim.pagina : "" %>
           
         
         </td>
