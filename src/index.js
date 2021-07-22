@@ -9,6 +9,7 @@ const app = express();
 const db = connect();
 
 app.use('/storage', express.static(path.join(__dirname, '../storage')));
+app.use( express.static( "public" ) );
 app.use(bodyParser());
 app.get("/", (req, res) => {
     res.json("Hello there");
