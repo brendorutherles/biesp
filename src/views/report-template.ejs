@@ -121,6 +121,19 @@
     padding: 0px 3px 0px 3px;
   }
 
+
+  .ss12 {
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 9px;
+    white-space: nowrap;
+    text-align:center;
+    vertical-align:top;
+    white-space: nowrap;
+
+
+  }
+
   .ritz .waffle .s2 {
     background-color: #ffffff;
     text-align: left;
@@ -315,6 +328,19 @@
     padding-top: 20;
 
   }
+
+
+  .ritz .waffle .ss0 {
+
+background-color: #ffffff;
+color: #000000;
+font-family: "Times New Roman";
+font-size: 10px;
+direction: initial;
+text-align: center;
+padding-top: 2;
+
+}
 
   .ritz .waffle .s20 {
     border-bottom: 2px SOLID #000000;
@@ -664,10 +690,11 @@
     background-color: #FAFAFA;
     font: 12pt "Tahoma";
   }
-
-  * {
+   
+   /** tamanho ideal da pagina brendo rutherles */
+   *{
     width: 1;
-    height: 13;
+    height: 11;
     margin-top: 1;
   }
 
@@ -1335,7 +1362,11 @@
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
         
           <%# verificação quantidade de paginas brendo rutherles %> 
+          <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ?
+           '1/2' : "" %>
 
+
+          
         
         </td>
       </tr>
@@ -1581,7 +1612,7 @@
       <tr style="height: 12px">
         <th id="1592487475R20" style="height: 12px" class="row-headers-background"></th>
         <td class="s0 borderLeft" rowspan="20">
-          <div style="font-size: 16px;" class="vertical">Dados do Envolvido</div>
+          <div style="font-size: 16px;" class="vertical">Dados do Envolvido </div>
         </td>
         <td class="s2">Mãe</td>
         <td class="s12"></td>
@@ -4695,12 +4726,13 @@
           
                       <%# objeto1 %>
           
-                      <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"
-                      rowspan="18">
+                      <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black;  border-right: 2px solid black;"
+                      rowspan="18"> Objeto
           
           
-                      <div class="s0" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  "></div>
+                      <div class=" vertical" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  "></div>
                     </td>
+
           
                        
           
@@ -5551,6 +5583,10 @@
                             <%= %>
                           </td>
                         </tr>
+
+
+
+
                         <tr style="height: 11px">
                           <th id="851099115R2" style="height: 11px" class="row-headers-background">
                             <div class="row-header-wrapper" style="line-height: 11px"></div>
@@ -5650,11 +5686,12 @@
                             <%# objeto1 %>
                 
                             <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"
-                            rowspan="18">Objeto
+                            rowspan="18">
                 
                 
-                            <div class=" vertical" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  "></div>
+                            <div class=" vertical" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  ">Objeto</div>
                           </td>
+      
                 
                              
                 
@@ -6462,6 +6499,51 @@
                 <tbody>
                   
                  
+ <tr style="height: 12px">
+                          <th id="851099115R0" style="height: 12px" class="row-headers-background">
+                            <div class="row-header-wrapper" style="line-height: 12px"></div>
+                          </th>
+                
+                          <td style="writing-mode: vertical-lr; border-top: 2px solid black; " class="rotate  borderLeft" colspan="2"
+                            rowspan="2">
+                             
+                          </td>
+                          <td class="s01 borderTop">Unidade Operacional</td>
+                          <td class="s02 borderTop">Circunscrição</td>
+                          <td class="s02 borderTop"></td>
+                          <td class="s03 borderTop"></td>
+                          <td class="s01 borderTop">Data ou Registro</td>
+                          <td class="s01 borderTop">Hora do Registro</td>
+                          <td class="s04 softmerge borderTop borderRigth">
+                            <div class="softmerge-inner ">
+                              Nº da Folha
+                
+                            </div>
+                          </td>
+                        </tr>
+                        <tr style="height: 21px">
+                          <th id="851099115R1" style="height: 21px" class="row-headers-background">
+                            <div class="row-header-wrapper" style="line-height: 21px"></div>
+                          </th>
+                          <td
+                            style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+                            class="s05"> 2BIEsp</td>
+                          <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+                            colspan="3"> AIS 26</td>
+                          <td
+                            style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+                            class="s05">
+                            <%= moment(boletim.createdAt).format('DD/MM/YYYY'); %>
+                          </td>
+                          <td
+                            style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+                            class="s05">
+                
+                          </td>
+                          <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
+                            <%= boletim.pessoas.length <= 2 && boletim.objetos.length <= 3 && boletim.veiculo.length <= 2 ?
+                            '2/2' : "" %>                          </td>
+                        </tr>
 
 
                   
@@ -6562,20 +6644,23 @@
                     <%# inicio do objeto %>
 
                       <%# objeto1 %>
-
-                      <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"
-                      rowspan="18">
+                      <%# pagina unica Objeto na vertical barra lateral objetoLateral  %>
 
 
-                      <div class=" vertical" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  ">Objeto</div>
+
+
+                      <td style=" transform: rotate(-25deg); display: inline-block; font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"
+                      rowspan="18"> <div class=" ss12"
+                      ></div>
+
                     </td>
 
+
                        
+                    <td style="writing-mode: vertical-lr; text-align: center;" class="s012" rowspan="6">Nº </td>
 
 
-
-                        <td style="writing-mode: vertical-lr; text-align: center;" class="s012" dir="ltr" rowspan="6">Nº
-                        </td>
+                      
                         <td class="s01">Envolvido</td>
                         <td class="s02">Tipo de Objeto</td>
                         <td class="s08"></td>
@@ -7078,7 +7163,7 @@
                     </th>
                     <td style="writing-mode: vertical-lr;" class="rotate s06 borderLeft" rowspan="12"> </td>
                     <td
-                      style="font-size: 11; text-align: left;  font-family:  'Trebuchet MS', sans-serif; "
+                      style="font-size: 13; text-align: justify;  font-family:  'Trebuchet MS', sans-serif; "
                       class="s023" colspan="8" rowspan="12">
 
                       <%# histórico %>
