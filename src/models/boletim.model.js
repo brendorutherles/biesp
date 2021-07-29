@@ -43,6 +43,8 @@ const BoletimSchema = new mongoose.Schema(
         telefone: { type: String, default: " " },
         tipo: { type: String, default: " " },
         sexo: { type: String, default: " " },
+        teste: { type: String, default: " " },
+
       },
     ],
 
