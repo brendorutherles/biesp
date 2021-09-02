@@ -13,7 +13,7 @@ const BoletimSchema = new mongoose.Schema(
     municipio: { type: String, default: " " },
     cep: { type: String, default: " " },
     date: { type: Date, default: new Date() },
-    horaRegistro: { type: String, default: new Date().getTime() },
+    horaRegistro: { type: Date, default: new Date().getTime() },
     dataFato: { type: String, default: " " },
     descr_natureza: { type: String, default: " " },
     tipoOcorr: { type: String, default: " " },
