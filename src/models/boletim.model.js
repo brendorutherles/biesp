@@ -12,7 +12,7 @@ const BoletimSchema = new mongoose.Schema(
     ponto: { type: String, default: " " },
     municipio: { type: String, default: " " },
     cep: { type: String, default: " " },
-    date: { type: String, default: new Date() },
+    date: { type: String, default: " " },
     horaRegistro: { type: String, default: " " },
     dataFato: { type: String, default: " " },
     descr_natureza: { type: String, default: " " },
