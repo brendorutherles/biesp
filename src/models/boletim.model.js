@@ -3,10 +3,6 @@ import mongoose from "mongoose";
 const BoletimSchema = new mongoose.Schema(
   {
     mike: { type: String, default: " " },
-
-    matricula: { type: String, default: " " },
-
-    responsavel: { type: String, default: " " },
     endereco: { type: String, default: " " },
     bairro: { type: String, default: " " },
     ponto: { type: String, default: " " },
@@ -19,7 +15,6 @@ const BoletimSchema = new mongoose.Schema(
     tipoOcorr: { type: String, default: " " },
     gt: { type: String, default: " " },
     efetivo: { type: String, default: " " },
-    dataFato: { type: String, default: " "  },
     horaFato: { type: String, default: " " },
 
 
