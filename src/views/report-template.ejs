@@ -1365,16 +1365,13 @@
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5" colspan="3">
           AIS 26</td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
-          <%= moment(boletim.createdAt).format('DD/MM/YYYY'); %>
         </td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
-          <%= boletim.horaRegistro %>
 
         </td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
 
           <%# verificação quantidade de paginas brendo rutherles %>
-            <%= boletim.pessoas.length <=2 && boletim.objetos.length <=3 && boletim.veiculo.length <=2 ? '1/2' : "" %>
 
 
 
@@ -1400,10 +1397,8 @@
         <td
           style="font-size: 14; border-left: 2px solid black;font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
           class="s7" colspan="5">
-          <%=boletim.tipoOcorr%>
         </td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5" colspan="2">
-          <%=boletim.mike%>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -1421,10 +1416,8 @@
         <td
           style="font-size: 14; border-left: 2px solid black; font-weight: bold; font-family:   'Trebuchet MS', sans-serif; "
           class="s9">
-          <%= boletim.dataFato%>
         </td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s9" colspan="2">
-          <%= boletim.horaFato%>
         </td>
 
 
@@ -1476,12 +1469,10 @@
         <td
           style="font-size: 14; border-left: 2px solid black; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
           class="s7" colspan="6">
-          <%=boletim.endereco%>
 
         </td>
         <td style="font-size: 14;  font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s19"
           style="  font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; ">
-          <%=boletim.numero%>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -1503,10 +1494,8 @@
         <td style="border-left: 2px solid black;" class="s20" colspan="2"></td>
         <td class="s7" style="font-size: 14;  font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
           colspan="4">
-          <%=boletim.bairro%>
         </td>
         <td style="font-size: 14;  font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s16">
-          <%=boletim.cep%>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -1525,7 +1514,6 @@
         <td style=" font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">PE</td>
         <td style="  font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s7"
           colspan="3">
-          <%=boletim.ponto%>
         </td>
       </tr>
       <tr style="height: 9px">
@@ -1534,32 +1522,11 @@
 
         <td style="border-top:  2px solid black; border-left: 2px solid black;" class="s0" rowspan="6">
           <div class="vertical">
-            <%= boletim.pessoas.length> 0 ? 'Nº 1' : 'Nº' %>
           </div>
         </td>
 
 
-        <% if(boletim.pessoas.length> 0){ %>
-
-          <td class="s21" rowspan="2">
-            <%= boletim.pessoas[0].tipo.toLowerCase().includes('tima') ? '(X) VÍTIMA' : '( ) VÍTIMA' %>
-          </td>
-          <td class="s21" rowspan="2">
-            <%= boletim.pessoas[0].tipo.toLowerCase().includes('putado') ? '(X) IMPUTADO' : '( ) IMPUTADO' %>
-          </td>
-          <td class="s21" rowspan="2">
-            <%= boletim.pessoas[0].tipo.toLowerCase().includes('peito') ? '(X) SUSPEITO' : '( ) SUSPEITO' %>
-          </td>
-          <td class="s21" rowspan="2">
-            <%= boletim.pessoas[0].tipo.toLowerCase().includes('munha') ? '(X) TESTEMUNHA' : '( ) TESTEMUNHA' %>
-          </td>
-          <td class="s22" rowspan="2">
-            <%= boletim.pessoas[0].tipo.toLowerCase().includes('outr') ? '(X) OUTROS' : '( ) OUTROS' %>
-          </td>
-          <td class="s21" rowspan="2">TURISTA</td>
-          <td class="s23">( ) SIM</td>
-          <% } else{ %>
-
+        
             <td class="s21" rowspan="2">( ) VÍTIMA</td>
             <td class="s21" rowspan="2">( ) IMPUTADO</td>
             <td class="s21" rowspan="2">( ) SUSPEITO</td>
@@ -1567,7 +1534,6 @@
             <td class="s22" rowspan="2">( ) OUTROS</td>
             <td class="s21" rowspan="2">TURISTA</td>
             <td class="s23">( ) SIM</td>
-            <% } %>
 
 
 
@@ -1606,7 +1572,6 @@
 
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s25 "
           colspan="7">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].nome : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -1623,7 +1588,6 @@
         <th id="1592487475R19" style="height: 21px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s7 fonte"
           colspan="7">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].pai : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -1643,7 +1607,6 @@
         <th id="1592487475R21" style="height: 21px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s25"
           colspan="7">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].mae : '------' %>
 
         </td>
       </tr>
@@ -1656,15 +1619,11 @@
         </td>
 
         <td class="s18 borderRigth"></td>
-        <% if(boletim.pessoas.length> 0){ %>
           <td class="s18 borderRigth">
-            <%= boletim.pessoas[0].sexo.toLowerCase().includes('culi') ? "Sexo (X) M" : 'Sexo ( ) M ' %>
+         'Sexo ( ) M ' %>
           </td>
 
-          <% } else{ %>
-            <td class="s18 ">Sexo ( ) M</td>
-
-            <% } %>
+        
 
 
 
@@ -1724,16 +1683,8 @@
         <th id="1592487475R23" style="height: 19px" class="row-headers-background"></th>
         <td class="s20" colspan="2"></td>
 
-        <% if(boletim.pessoas.length> 0){ %>
-          <td class="s16">
-            <%= boletim.pessoas[0].sexo.toLowerCase().includes('mini') ? "Sexo (X) F" : 'Sexo ( ) F ' %>
-          </td>
-
-          <% } else{ %>
+        
             <td class="s16">Sexo ( ) F</td>
-
-            <% } %>
-
 
 
 
@@ -1800,7 +1751,6 @@
       <tr style="height: 15px">
         <th id="1592487475R26" style="height: 15px" class="row-headers-background"></th>
         <td class="s19" style="  font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; ">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].nascimento : '------' %>
         </td>
         <td class="s28"></td>
         <td class="s33 softmerge">
@@ -1853,14 +1803,11 @@
         <th id="1592487475R28" style="height: 21px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s36"
           colspan="2">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].rg : '------' %>
         </td>
         <td class="s37"></td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s9" colspan="2">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].cpf : '------' %>
         </td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s7" colspan="2">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].naturalidade : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -1882,7 +1829,6 @@
         <th id="1592487475R30" style="height: 21px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s25"
           colspan="5">
-          <%= boletim.pessoas.length> 0 ? boletim.pessoas[0].endereco : '------' %>
 
         </td>
 
@@ -1992,34 +1938,12 @@
 
           <td style=" border-left: 2px solid black;" class="s0" rowspan="6">
             <div class="vertical">
-              <%= boletim.pessoas.length> 1 ? 'Nº 2' : 'Nº' %>
             </div>
           </td>
 
 
 
 
-
-          <% if(boletim.pessoas.length> 1){ %>
-
-            <td class="s21" rowspan="2">
-              <%= boletim.pessoas[1].tipo.toLowerCase().includes('tima') ? '(X) VÍTIMA' : '( ) VÍTIMA' %>
-            </td>
-            <td class="s21" rowspan="2">
-              <%= boletim.pessoas[1].tipo.toLowerCase().includes('putado') ? '(X) IMPUTADO' : '( ) IMPUTADO' %>
-            </td>
-            <td class="s21" rowspan="2">
-              <%= boletim.pessoas[1].tipo.toLowerCase().includes('peito') ? '(X) SUSPEITO' : '( ) SUSPEITO' %>
-            </td>
-            <td class="s21" rowspan="2">
-              <%= boletim.pessoas[1].tipo.toLowerCase().includes('munha') ? '(X) TESTEMUNHA' : '( ) TESTEMUNHA' %>
-            </td>
-            <td class="s22" rowspan="2">
-              <%= boletim.pessoas[1].tipo.toLowerCase().includes('outr') ? '(X) OUTROS' : '( ) OUTROS' %>
-            </td>
-            <td class="s21" rowspan="2">TURISTA</td>
-            <td class="s23">( ) SIM</td>
-            <% } else{ %>
 
               <td class="s21" rowspan="2">( ) VÍTIMA</td>
               <td class="s21" rowspan="2">( ) IMPUTADO</td>
@@ -2028,7 +1952,6 @@
               <td class="s22" rowspan="2">( ) OUTROS</td>
               <td class="s21" rowspan="2">TURISTA</td>
               <td class="s23">( ) SIM</td>
-              <% } %>
 
 
 
@@ -2053,7 +1976,6 @@
 
 
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s9" colspan="7">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].nome : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -2069,7 +1991,6 @@
       <tr style="height: 20px">
         <th id="1592487475R45" style="height: 20px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s9" colspan="7">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].pai : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -2089,7 +2010,6 @@
         <th id="1592487475R47" style="height: 24px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s16"
           colspan="7">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].mae : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -2213,7 +2133,7 @@
       <tr style="height: 12px">
         <th id="1592487475R52" style="height: 12px" class="row-headers-background"></th>
         <td class="s19" style="  font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; ">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].nascimento : '------' %>
+
         </td>
         </td>
         <td class="s28">( )</td>
@@ -2261,15 +2181,12 @@
         <th id="1592487475R54" style="height: 12px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s44"
           colspan="2">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].rg : '------' %>
         </td>
         <td class="s37"></td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s9 "
           colspan="2">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].cpf : '------' %>
         </td>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s9" colspan="2">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].naturalidade : '------' %>
         </td>
       </tr>
       <tr style="height: 12px">
@@ -2290,7 +2207,6 @@
         <th id="1592487475R56" style="height: 28px" class="row-headers-background"></th>
         <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s25"
           colspan="5">
-          <%= boletim.pessoas.length> 1 ? boletim.pessoas[1].endereco: '------' %>
         </td>
         <td class="s19" style="  font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "></td>
         <td class="s19" style="  font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "></td>
