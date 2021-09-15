@@ -13,7 +13,7 @@ const BoletimSchema = new mongoose.Schema(
     municipio: { type: String, default: " " },
     cep: { type: String, default: " " },
     date: { type: Date, default: new Date() },
-    horaRegistro: { type: String, default: new Date().getTime() },
+    horaRegistro: { type: String, default: " " },
     dataFato: { type: String, default: " " },
     descr_natureza: { type: String, default: " " },
     tipoOcorr: { type: String, default: " " },
@@ -21,7 +21,6 @@ const BoletimSchema = new mongoose.Schema(
     efetivo: { type: String, default: " " },
     dataFato: { type: String, default: " "  },
     horaFato: { type: String, default: " " },
-    pagina: { type: String, default: " " },
 
 
 
@@ -31,7 +30,6 @@ const BoletimSchema = new mongoose.Schema(
         pai: { type: String, default: " " },
         nome: { type: String, default: " " },
         mae: { type: String, default: " " },
-        idade_aparente: { type: String, default: " " },
         escolaridade: { type: String, default: " " },
         endereco: { type: String, default: " " },
         endereco_numero: { type: String, default: " " },
