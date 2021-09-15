@@ -59,7 +59,6 @@ const BoletimSchema = new mongoose.Schema(
         chassi: { type: String, default: " " },
         uf: { type: String, default: " " },
         marca: { type: String, default: " " },
-        motivo: { type: String, default: " " },
 
       },
     ],
