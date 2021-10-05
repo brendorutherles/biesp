@@ -3,7 +3,7 @@ import dotenv  from "dotenv";
 
 dotenv.config();
 
-const mongourl = "mongodb+srv://mongoadm:AI9zpiVGKYVHS5zi@cluster0.7momj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const mongourl = "mongodb+srv://brendo:brendo1996@cluster0.hb9h9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const mongoconfig = {
   useNewUrlParser: true,
   useCreateIndex: true,
