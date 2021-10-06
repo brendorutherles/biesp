@@ -1,11 +1,5 @@
 
-
-{
+ {
   "schemaVersion": 2,
-  "dockerfileLines": [
-                        "FROM node:14.7.0",
-                        "RUN chmod -R 777 /storage"
-                        
-                        
-                    ]
+  "templateId": "node/8.7.0"
  }
