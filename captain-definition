@@ -1,14 +1,15 @@
  {
   "schemaVersion": 2,
   "dockerfileLines": [
-                        "FROM node:16-buster-slim ",
+                        "FROM node:16-stretch ",
                         "RUN mkdir -p /usr/src/app",
                         "WORKDIR /usr/src/app",
                         "COPY ./package.json /usr/src/app/",
                         "RUN npm install && npm cache clean --force",
+                        "RUN  npm uninstall -g phantomjs",
+                        "RUN  npm uninstall phantomjs",
                         "RUN npm uninstall html-pdf",
                         "RUN npm install html-pdf",
-                        "RUN npm link phantomjs-prebuilt",
                         "COPY ./ /usr/src/app",
                         "ENV NODE_ENV production",
                         "ENV PORT 80",
